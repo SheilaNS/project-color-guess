@@ -30,20 +30,19 @@ function colorGenerate() {
     spotColor.style.backgroundColor = newColor();
   }
   createText();
+  const answer = document.getElementById('answer');
+  answer.innerText = 'Escolha uma cor';
 }
 
 window.onload = colorGenerate;
 
 function pickColor(event) {
   const textColor = document.getElementById('rgb-color').innerText;
-  console.log(textColor);
   const chosenColor = event.target.style.backgroundColor;
-  console.log(chosenColor);
 
   const answer = document.getElementById('answer');
   if (textColor === chosenColor) {
-    answer.innerHTML = 'Acertou!';
-    console.log('passou');
+    answer.innerText = 'Acertou!';
   } else {
     answer.innerText = 'Errou! Tente novamente!';
   }
@@ -53,3 +52,6 @@ const pickSpot = document.querySelectorAll('.ball');
 for (let i = 0; i < pickSpot.length; i += 1) {
   pickSpot[i].addEventListener('click', pickColor);
 }
+
+const reset = document.getElementById('reset-game');
+reset.addEventListener('click', colorGenerate);
