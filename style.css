@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  margin: 10px;
+}
+
+p {
+  margin: 10px;
+}
+
+.ball {
+  border-radius: 100%;
+  border: 1px solid black;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin: 10px;
+}
