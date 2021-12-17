@@ -1,12 +1,24 @@
-function randomNumber() {
+function randomNumberColor() {
   const number = Math.floor(Math.random() * 256);
   return number;
 }
 
+function randomNumberText() {
+  const text = Math.floor(Math.random() * 6 + 1);
+  return text;
+}
+
+function createText() {
+  const guessText = document.getElementById('rgb-color');
+  const colorNumber = randomNumberText();
+  const spotColor = document.getElementById(`color${colorNumber}`);
+  guessText.innerText = spotColor.style.backgroundColor;
+}
+
 function newColor() {
-  const rgbNumber1 = randomNumber();
-  const rgbNumber2 = randomNumber();
-  const rgbNumber3 = randomNumber();
+  const rgbNumber1 = randomNumberColor();
+  const rgbNumber2 = randomNumberColor();
+  const rgbNumber3 = randomNumberColor();
   const newBackColor = `rgb( ${rgbNumber1} , ${rgbNumber2} , ${rgbNumber3} )`;
   return newBackColor;
 }
@@ -14,9 +26,30 @@ function newColor() {
 function colorGenerate() {
   const colorSpots = document.querySelectorAll('.ball');
   for (let i = 0; i < colorSpots.length; i += 1) {
-    const soptColor = document.getElementById(`color${[i + 1]}`);
-    soptColor.style.backgroundColor = newColor();
+    const spotColor = document.getElementById(`color${[i + 1]}`);
+    spotColor.style.backgroundColor = newColor();
   }
+  createText();
 }
 
 window.onload = colorGenerate;
+
+function pickColor(event) {
+  const textColor = document.getElementById('rgb-color').innerText;
+  console.log(textColor);
+  const chosenColor = event.target.style.backgroundColor;
+  console.log(chosenColor);
+
+  const answer = document.getElementById('answer');
+  if (textColor === chosenColor) {
+    answer.innerHTML = 'Acertou!';
+    console.log('passou');
+  } else {
+    answer.innerText = 'Errou! Tente novamente!';
+  }
+}
+
+const pickSpot = document.querySelectorAll('.ball');
+for (let i = 0; i < pickSpot.length; i += 1) {
+  pickSpot[i].addEventListener('click', pickColor);
+}
