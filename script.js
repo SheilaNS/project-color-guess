@@ -39,10 +39,11 @@ window.onload = colorGenerate;
 function pickColor(event) {
   const textColor = document.getElementById('rgb-color').innerText;
   const chosenColor = event.target.style.backgroundColor;
-
   const answer = document.getElementById('answer');
   if (textColor === chosenColor) {
+    const placar = document.getElementById('score');
     answer.innerText = 'Acertou!';
+    placar.innerText = parseInt(placar.innerText, 10) + 3;
   } else {
     answer.innerText = 'Errou! Tente novamente!';
   }
