@@ -1,3 +1,5 @@
+# :art: Projeto Color Guess :paintbrush:
+
 ## :page_facing_up: Sobre
 
 Projeto Bônus do Bloco 5 - JavaScript: DOM, Eventos e Web Storage do curso de Desenvolvimento Web da [Trybe](https://www.betrybe.com).<br>
