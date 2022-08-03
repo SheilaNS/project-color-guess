@@ -9,7 +9,7 @@ Requisitos feitos: 7
 
 ## :game_die: Regras do Jogo
 1 - Clique na cor que você acha que corresponde ao gódigo RGB que aparece na tela.<br>
-2 - A cada cor correta vale 3 pontos.<br>
+2 - A cada cor correta o placar aumenta 3 pontos.<br>
 3 - Para tentar novamente, clique no botão 'De novo!'.<br>
 4 - Para resetar o plavar, atualize a página.
 
