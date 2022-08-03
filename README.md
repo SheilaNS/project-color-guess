@@ -11,7 +11,7 @@ Requisitos feitos: 7
 1 - Clique na cor que você acha que corresponde ao gódigo RGB que aparece na tela.<br>
 2 - A cada cor correta o placar aumenta 3 pontos.<br>
 3 - Para tentar novamente, clique no botão 'De novo!'.<br>
-4 - Para resetar o plavar, atualize a página.
+4 - Para resetar o placar, atualize a página.
 
 ## :computer: Habilidades desenvolvidas
 
